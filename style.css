@@ -1,0 +1,19 @@
+header {
+    font-size: 24px;
+}
+
+.container {
+    border: 5px solid red;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 40px;
+}
+
+#questionbox {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.abtn {
+    display: none;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <title>quiz of the century!</title>
+</head>
+
+<body>
+    <!-- Whiteboard Notes 
+    
+        When site is loaded: option to start quiz or view highscores
+        quiz starts:
+            timer starts
+            load question box,
+            for length of questions:
+                load question.
+                    incorrect - decrement timer,
+                        change color of button,
+                            deactivate button,
+                        display 'wrong'
+                    vs correct
+                        display 'Correct'
+                        display 'next question button'
+                    on next question, increment question index,
+                    update question box.
+            on complete get input initials, save to file with remaining time.
+
+                
+    
+    -->
+    <header>
+        <a href='#' onclick='showHighScores'>View Highscores</a>
+        <span id='timer'>Timer</span>
+    </header>
+    <div class='container bg-success'>
+        <div class='row'>
+            <div class='col'>
+                <h1 id='boxtop'>Welcome to the Quiz</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col'>
+                <p id="question-text">
+                    You will have 5 minutes to complete this quiz. Every wrong answer will deduct 10 seconds from you
+                    time. Your remaining time is your score! Good luck!
+                </p>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col'>
+                <button class="btn-primary" id="start-quiz">Start the Quiz!</button>
+            </div>
+            <div class='col'>
+                <button class="btn-danger abtn" id="a1">1</button>
+            </div>
+
+            <div class='col'>
+                <button class="btn-danger abtn" id="a2">2</button>
+            </div>
+
+            <div class='col'>
+                <button class="btn-danger abtn" id="a3">3</button>
+            </div>
+            <div class='col'>
+                <button class="btn-danger abtn" id="a4">4</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
