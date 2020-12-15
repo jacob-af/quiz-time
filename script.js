@@ -1,60 +1,68 @@
-let theQuiz = [
-    {
-        question: 'What does DOM stand for?',
-        answers: [
-            {
-                a: "Dope Ocelot, Man",
-                isCorrect: false
-            },
-            {
-                a: "Dormant Olfactory Mayhem",
-                isCorrect: false
-            },
-            {
-                a: "Domain Object Manifest",
-                isCorrect: false
-            },
-            {
-                a: "Document Object Model",
-                isCorrect: true
-            }
-        ]
-    },
-    {
-        question: 'What does HTML stand for?',
-        answers: [
-            {
-                a: "Hold the Mustard, Lisa",
-                isCorrect: false
-            },
-            {
-                a: "High Tech Machine Language",
-                isCorrect: false
-            },
-            {
-                a: "Hyper Technical Master Lithograph",
-                isCorrect: false
-            },
-            {
-                a: "Hypertext Markup Language",
-                isCorrect: true
-            }
-        ]
-    },
-]
+let theQuiz= [];
 
+fetch('the-quiz.json')
+    .then(response => {
+        return response.json()
+    })
+    .then(questions => {
+        theQuiz = questions;
+    })
 
+// let theQuiz = [
+//     {
+//         question: 'What does DOM stand for?',
+//         answers: [
+//             {
+//                 a: "Dope Ocelot, Man",
+//                 isCorrect: false
+//             },
+//             {
+//                 a: "Dormant Olfactory Mayhem",
+//                 isCorrect: false
+//             },
+//             {
+//                 a: "Domain Object Manifest",
+//                 isCorrect: false
+//             },
+//             {
+//                 a: "Document Object Model",
+//                 isCorrect: true
+//             }
+//         ]
+//     },
+//     {
+//         question: 'What does HTML stand for?',
+//         answers: [
+//             {
+//                 a: "Hold the Mustard, Lisa",
+//                 isCorrect: false
+//             },
+//             {
+//                 a: "High Tech Machine Language",
+//                 isCorrect: false
+//             },
+//             {
+//                 a: "Hyper Technical Master Lithograph",
+//                 isCorrect: false
+//             },
+//             {
+//                 a: "Hypertext Markup Language",
+//                 isCorrect: true
+//             }
+//         ]
+//     },
+// ]
 
 let score;
 let questionCount = 0;
-let timeRemaining = 50;
-const boxTop = document.getElementById('boxtop')
-const questionText = document.getElementById('question-text')
+let timeRemaining = 60;
 const abtns = document.getElementsByClassName('abtn')
 var highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 startButton.addEventListener("click", startGame);
 resetButton.addEventListener("click", reset)
+submitInit.addEventListener('click', addHighScore)
+showScores.addEventListener('click', showHighScores)
 a1.addEventListener("click", function (event) {
     checkAnswer(event)
 })
@@ -67,25 +75,16 @@ a3.addEventListener("click", function (event) {
 a4.addEventListener("click", function (event) {
     checkAnswer(event)
 })
-submitInit.addEventListener('click', function (event) {
-    addHighScore(event)
-})
-showScores.addEventListener('click', function (event) {
-    showHighScores(event)
-})
-
 
 function startGame() {
-    questionCount = 0
     startTime();
     startQuiz();
 }
 
 function startTime() {
-    //starttimer
     var timerInterval = setInterval(function () {
-        //timeRemaining -= 1;
         timer.textContent = timeRemaining + " seconds remaining.";
+        timeRemaining -= 1;
 
         if (timeRemaining <= 0 && timeRemaining > -11) {
             clearInterval(timerInterval);
@@ -100,9 +99,10 @@ function startTime() {
 }
 
 function startQuiz() {
-    startButton.style.display = "none";
+    startButtonDiv.style.display = "none";
+    showScoresDiv.style.display = 'none';
     for (i = 0; i < abtns.length; i++) {
-        abtns[i].style.display = 'flex';
+        abtns[i].style.display = 'inline';
     }
     nextQuestion()
 }
@@ -126,7 +126,7 @@ function nextQuestion() {
         }
         theQuiz.splice(currentQuestion, 1)
     } else {
-        endGame();
+        quizOver();
     }
 }
 
@@ -148,22 +148,27 @@ function overTime() {
     resetButton.style.display = "inline";
 }
 
-function endGame() {
-    score = timeRemaining
+function quizOver() {
+    score = timeRemaining;
     timeRemaining = -11;
-    console.log(timeRemaining)
-    boxtop.innerHTML = "Congratulations! you've completed the quiz!"
-    questionText.innerHTML = `you completed the quiz in ${score} seconds!\n
-    add your initials to the Highscores!\nOnly the top 5 scores will be saved!`
+    console.log(timeRemaining);
+    boxtop.innerHTML = "Congratulations! You've completed the quiz!"
     for (i = 0; i < abtns.length; i++) {
         abtns[i].style.display = 'none';
     }
-    initialsForm.style.display = 'inline'
+    if (score > highScores[4].score) {
+        questionText.innerHTML = `You completed the quiz in ${score} seconds!\n
+    That's a new HighScore!\n`;
+        initialsForm.style.display = 'inline';
+    } else {
+        questionText.innerHTML = `you completed the quiz in ${score} seconds!`;
+        resetButton.style.display = 'inline';
+        showScoresDiv.style.display = 'inline';
+    }
 }
 
 function addHighScore(event) {
     event.preventDefault();
-    
     initials = document.getElementById('initials').value
     if (validate(initials)) {
         initialsForm.style.display = 'none'
@@ -183,11 +188,12 @@ function validate(initials) {
     }
 }
 
-function showHighScores(event) {
-    event.target.disabled = true;
-    startButton.style.display = "none";
+function showHighScores() {
+    showScoresDiv.style.display = 'none';
+    startButtonDiv.style.display = 'none';
     hslist = document.createElement('ol')
     hslist.id = 'hscores'
+    highScores.splice(5)
     hslist.innerHTML = highScores
         .map(score => {
             return `<li class="high-score">${score.initials} :  ${score.score}</li>`;

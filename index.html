@@ -13,18 +13,18 @@
 <body>
 
     <header>
-        <button class='btn' id='showScores'>View Highscores</a>
-            <h2 id='timer'>Timer</h2>
+        
+            <h2 id='timer'>---</h2>
     </header>
-    <div class='container bg-success'>
+    <div class='container'>
         <div class='row'>
             <div class='col'>
-                <h1 id='boxtop'>Welcome to the Quiz</h1>
+                <h1 id='boxtop' class="text-center">Welcome to the Quiz</h1>
             </div>
         </div>
         <div class='row'>
             <div class='col'>
-                <p id="question-text">
+                <p id="questionText">
                     You will have 5 minutes to complete this quiz. Every wrong answer will deduct 10 seconds from you
                     time. Your remaining time is your score! Good luck!
                 </p>
@@ -32,32 +32,35 @@
         </div>
 
         <div class='row'>
-            <div class='col' id="startButton">
-                <button class="btn btn-primary">Start the Quiz!</button>
+            <div class='col' id="startButtonDiv">
+                <button class="btn" id="startButton">Start the Quiz!</button>
+            </div>
+            <div class='col' id='showScoresDiv'>
+                <button class='btn' id='showScores'>View Highscores</button>
             </div>
             <div class='col' id="resetButton">
-                <button class="btn btn-primary">Go Back</button>
+                <button class="btn">Go Back</button>
             </div>
             <div class='col abtn'>
-                <button class="btn btn-danger" id="a1">1</button>
-            </div>
-
-            <div class='col abtn'>
-                <button class="btn btn-danger" id="a2">2</button>
+                <button class="btn" id="a1">1</button>
             </div>
 
             <div class='col abtn'>
-                <button class="btn btn-danger" id="a3">3</button>
+                <button class="btn" id="a2">2</button>
+            </div>
+
+            <div class='col abtn'>
+                <button class="btn" id="a3">3</button>
             </div>
             <div class='col abtn'>
-                <button class="btn btn-danger" id="a4">4</button>
+                <button class="btn" id="a4">4</button>
             </div>
             <div class='col' id="initialsForm">
                 <div class="form-group">
                     <label for="initials">Initials</label>
                     <input type="text" class="form-control" id="initials" placeholder="Enter your initials">
                 </div>
-                <button type="submit" class="btn btn-primary" id="submitInit">Submit</button>
+                <button type="submit" class="btn" id="submitInit">Submit</button>
             </div>
         </div>
 

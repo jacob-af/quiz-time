@@ -1,31 +1,50 @@
+body {
+    text-align: center;
+    background-color: #191970;
+}
+
 header {
     font-size: 24px;
+    color: #ff9912
 }
 
 .container {
-    border: 5px solid red;
+    border: 5px solid #ff9912;
+    background-color: #3d59ab;
+    color: #FFD700;
     border-radius: 15px;
     padding: 40px;
-    margin: 40px;
+    margin: 40px auto;
 }
 
-#questionbox {
-    border: 1px solid black;
-    padding: 20px;
+#questionText {
+    text-align: jleft;
+    font-size: 24px;
 }
 
 #initialsForm {
     display: none;
 }
 
-.abtn,
-#resetButton {
+.btn {
+    font-size: 16px;
+    background-color:  #ff9912;
+    color: #191970;
+}
+
+li {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.abtn, #resetButton {
     display: none;
 }
 
-.btn:focus {
+/* .btn:focus {
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545;
     box-shadow: none;
-}
+} */
