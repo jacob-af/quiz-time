@@ -84,7 +84,7 @@ function startGame() {
 function startTime() {
     var timerInterval = setInterval(function () {
         timer.textContent = timeRemaining + " seconds remaining.";
-        timeRemaining -= 1;
+        timeRemaining--;
 
         if (timeRemaining <= 0 && timeRemaining > -11) {
             clearInterval(timerInterval);
@@ -156,7 +156,7 @@ function quizOver() {
     for (i = 0; i < abtns.length; i++) {
         abtns[i].style.display = 'none';
     }
-    if (score > highScores[4].score) {
+    if (score > highScores[4].score || higScores.length < 5) {
         questionText.innerHTML = `You completed the quiz in ${score} seconds!\n
     That's a new HighScore!\n`;
         initialsForm.style.display = 'inline';
