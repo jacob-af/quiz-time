@@ -53,7 +53,7 @@ fetch('the-quiz.json')
 //     },
 // ]
 
-let score;
+let score = 0;
 let questionCount = 0;
 let timeRemaining = 60;
 const abtns = document.getElementsByClassName('abtn')
