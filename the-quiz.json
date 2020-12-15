@@ -1,6 +1,6 @@
 [
     {
-        "question": 'What does DOM stand for?',
+        "question": "What does DOM stand for?",
         "answers": [
             {
                 "a": "Dope Ocelot, Man",
@@ -21,7 +21,7 @@
         ]
     },
     {
-        "question": 'What does HTML stand for?',
+        "question": "What does HTML stand for?",
         "answers": [
             {
                 "a": "Hold the Mustard, Lisa",
