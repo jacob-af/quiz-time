@@ -11,31 +11,10 @@
 </head>
 
 <body>
-    <!-- Whiteboard Notes 
-    
-        When site is loaded: option to start quiz or view highscores
-        quiz starts:
-            timer starts
-            load question box,
-            for length of questions:
-                load question.
-                    incorrect - decrement timer,
-                        change color of button,
-                            deactivate button,
-                        display 'wrong'
-                    vs correct
-                        display 'Correct'
-                        display 'next question button'
-                    on next question, increment question index,
-                    update question box.
-            on complete get input initials, save to file with remaining time.
 
-                
-    
-    -->
     <header>
-        <a href='#' onclick='showHighScores'>View Highscores</a>
-        <span id='timer'>Timer</span>
+        <button class='btn' id='showScores'>View Highscores</a>
+            <h2 id='timer'>Timer</h2>
     </header>
     <div class='container bg-success'>
         <div class='row'>
@@ -51,23 +30,34 @@
                 </p>
             </div>
         </div>
+
         <div class='row'>
-            <div class='col'>
-                <button class="btn-primary" id="start-quiz">Start the Quiz!</button>
+            <div class='col' id="startButton">
+                <button class="btn btn-primary">Start the Quiz!</button>
             </div>
-            <div class='col'>
-                <button class="btn-danger abtn" id="a1">1</button>
+            <div class='col' id="resetButton">
+                <button class="btn btn-primary">Go Back</button>
+            </div>
+            <div class='col abtn'>
+                <button class="btn btn-danger" id="a1">1</button>
             </div>
 
-            <div class='col'>
-                <button class="btn-danger abtn" id="a2">2</button>
+            <div class='col abtn'>
+                <button class="btn btn-danger" id="a2">2</button>
             </div>
 
-            <div class='col'>
-                <button class="btn-danger abtn" id="a3">3</button>
+            <div class='col abtn'>
+                <button class="btn btn-danger" id="a3">3</button>
             </div>
-            <div class='col'>
-                <button class="btn-danger abtn" id="a4">4</button>
+            <div class='col abtn'>
+                <button class="btn btn-danger" id="a4">4</button>
+            </div>
+            <div class='col' id="initialsForm">
+                <div class="form-group">
+                    <label for="initials">Initials</label>
+                    <input type="text" class="form-control" id="initials" placeholder="Enter your initials">
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitInit">Submit</button>
             </div>
         </div>
 

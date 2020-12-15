@@ -14,6 +14,18 @@ header {
     padding: 20px;
 }
 
-.abtn {
+#initialsForm {
     display: none;
+}
+
+.abtn,
+#resetButton {
+    display: none;
+}
+
+.btn:focus {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    box-shadow: none;
 }
