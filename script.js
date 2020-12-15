@@ -1,4 +1,4 @@
-let theQuiz= [];
+let theQuiz = [];
 
 fetch('the-quiz.json')
     .then(response => {
@@ -156,7 +156,11 @@ function quizOver() {
     for (i = 0; i < abtns.length; i++) {
         abtns[i].style.display = 'none';
     }
-    if (score > highScores[4].score || higScores.length < 5) {
+    if (highScores.length < 5) {
+        questionText.innerHTML = `You completed the quiz in ${score} seconds!\n
+    That's a new HighScore!\n`;
+        initialsForm.style.display = 'inline';
+    } else if (score > highScores[4].score) {
         questionText.innerHTML = `You completed the quiz in ${score} seconds!\n
     That's a new HighScore!\n`;
         initialsForm.style.display = 'inline';
