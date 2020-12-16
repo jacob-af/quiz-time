@@ -41,14 +41,7 @@ li {
 }
 
 .abtn button {
-    min-height: 40px;
+    min-height: 60px;
     min-width: 80px;
     margin: 5px auto;
 }
-
-/* .btn:focus {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
-    box-shadow: none;
-} */
