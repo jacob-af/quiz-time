@@ -7,7 +7,9 @@ fetch('the-quiz.json')
     .then(questions => {
         theQuiz = questions;
     })
-
+    .catch(err => {
+        console.log(err)
+    })
 // let theQuiz = [
 //     {
 //         question: 'What does DOM stand for?',

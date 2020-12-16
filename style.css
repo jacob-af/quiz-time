@@ -22,10 +22,6 @@ header {
     font-size: 24px;
 }
 
-#initialsForm {
-    display: none;
-}
-
 .btn {
     font-size: 16px;
     background-color:  #ff9912;
@@ -38,8 +34,15 @@ li {
     margin: 0 auto;
 }
 
-.abtn, #resetButton {
+.abtn, 
+#resetButton,
+#initialsForm {
     display: none;
+}
+
+.abtn {
+    height-min: 40px;
+    margin: 5px auto;
 }
 
 /* .btn:focus {
