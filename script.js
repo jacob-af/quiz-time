@@ -114,25 +114,23 @@ function quizOver() {
     for (i = 0; i < abtns.length; i++) {
         abtns[i].style.display = 'none';
     }
-    if (highScores.length < 5) {
-        questionText.innerHTML = `You completed the quiz with ${score} seconds remaining!<br>
-    That's a new HighScore!\n`;
-        initialsForm.style.display = 'inline';
-    } else if (score > highScores[4].score) {
+    if (highScores.length < 5 || score > highScores[4].score) {
         questionText.innerHTML = `You completed the quiz with ${score} seconds remaining!<br>
     That's a new HighScore!`;
         initialsForm.style.display = 'inline';
     } else {
-        questionText.innerHTML = `you completed the quiz in ${score} seconds!`;
+        questionText.innerHTML = `You completed the quiz with ${score} seconds remaining!`;
         resetButton.style.display = 'inline';
         showScoresDiv.style.display = 'inline';
     }
 }
 
+
+
 function addHighScore(event) {
     event.preventDefault();
     initials = document.getElementById('initials').value
-    if (validate(initials)) {
+    if (initials.length > 0 && initials.length < 4) {
         initialsForm.style.display = 'none'
         highScores.push({ score: score, initials: initials.toUpperCase() })
         highScores.sort((a, b) => b.score - a.score)
@@ -140,13 +138,6 @@ function addHighScore(event) {
         highScores.splice(5)
         console.log('ay')
         showHighScores()
-    }
-
-}
-
-function validate(initials) {
-    if (initials.length > 0 && initials.length < 4) {
-        return true
     }
 }
 
@@ -163,7 +154,6 @@ function showHighScores() {
     questionText.appendChild(hslist)
     resetButton.style.display = 'inline';
 }
-
 
 function reset() {
     location.reload()
