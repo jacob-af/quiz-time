@@ -1,6 +1,6 @@
 let theQuiz = [];
 
-fetch('the-quiz.json')
+fetch('./the-quiz.json')
     .then(response => {
         return response.json()
     })
@@ -10,50 +10,6 @@ fetch('the-quiz.json')
     .catch(err => {
         console.log(err)
     })
-// let theQuiz = [
-//     {
-//         question: 'What does DOM stand for?',
-//         answers: [
-//             {
-//                 a: "Dope Ocelot, Man",
-//                 isCorrect: false
-//             },
-//             {
-//                 a: "Dormant Olfactory Mayhem",
-//                 isCorrect: false
-//             },
-//             {
-//                 a: "Domain Object Manifest",
-//                 isCorrect: false
-//             },
-//             {
-//                 a: "Document Object Model",
-//                 isCorrect: true
-//             }
-//         ]
-//     },
-//     {
-//         question: 'What does HTML stand for?',
-//         answers: [
-//             {
-//                 a: "Hold the Mustard, Lisa",
-//                 isCorrect: false
-//             },
-//             {
-//                 a: "High Tech Machine Language",
-//                 isCorrect: false
-//             },
-//             {
-//                 a: "Hyper Technical Master Lithograph",
-//                 isCorrect: false
-//             },
-//             {
-//                 a: "Hypertext Markup Language",
-//                 isCorrect: true
-//             }
-//         ]
-//     },
-// ]
 
 let score = 0;
 let questionCount = 0;

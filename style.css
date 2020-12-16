@@ -41,7 +41,8 @@ li {
 }
 
 .abtn {
-    height-min: 40px;
+    min-height: 40px;
+    min-width: 80px;
     margin: 5px auto;
 }
 
