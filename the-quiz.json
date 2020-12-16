@@ -45,19 +45,19 @@
         "question": "Where in the HTML file should you link your JavaScript File?",
         "answers": [
             {
-                "a": "In the <head> section",
+                "a": "In the head section",
                 "isCorrect": false
             },
             {
-                "a": "In the <header> section",
+                "a": "In the header section",
                 "isCorrect": false
             },
             {
-                "a": "At the top of the <body> section",
+                "a": "At the top of the body section",
                 "isCorrect": false
             },
             {
-                "a": "At the bottom of the <body> section",
+                "a": "At the bottom of the body section",
                 "isCorrect": true
             }
         ]
@@ -70,7 +70,7 @@
                 "isCorrect": false
             },
             {
-                "a": "<!-- -->",
+                "a": "||",
                 "isCorrect": false
             },
             {
@@ -84,22 +84,22 @@
         ]
     },
     {
-        "question": "what is the correct syntax to loop through an array?",
+        "question": "the two common loop types are:",
         "answers": [
             {
-                "a": "for (var i=0, i < array.legth, i++) {}",
+                "a": "for and against",
                 "isCorrect": false
             },
             {
-                "a": "for i in array",
+                "a": "while and awhilelater",
                 "isCorrect": false
             },
             {
-                "a": "while (i = 0; i > lengthOf(array); i++) {}",
+                "a": "for and when",
                 "isCorrect": false
             },
             {
-                "a": "for (var i=0; i < array.legth; i++) {}",
+                "a": "for and while",
                 "isCorrect": true
             }
         ]
