@@ -40,5 +40,68 @@
                 "isCorrect": true
             }
         ]
+    },
+    {
+        "question": "Where in the HTML file should you link your JavaScript File?",
+        "answers": [
+            {
+                "a": "In the <head> section",
+                "isCorrect": false
+            },
+            {
+                "a": "In the <header> section",
+                "isCorrect": false
+            },
+            {
+                "a": "At the top of the <body> section",
+                "isCorrect": false
+            },
+            {
+                "a": "At the bottom of the <body> section",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "The correct notation for a single line comment in JavaScript is:",
+        "answers": [
+            {
+                "a": "*/",
+                "isCorrect": false
+            },
+            {
+                "a": "<!-- -->",
+                "isCorrect": false
+            },
+            {
+                "a": "/!",
+                "isCorrect": false
+            },
+            {
+                "a": "//",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "what is the correct syntax to loop through an array?",
+        "answers": [
+            {
+                "a": "for (var i=0, i < array.legth, i++) {}",
+                "isCorrect": false
+            },
+            {
+                "a": "for i in array",
+                "isCorrect": false
+            },
+            {
+                "a": "while (i = 0; i > lengthOf(array); i++) {}",
+                "isCorrect": false
+            },
+            {
+                "a": "for (var i=0; i < array.legth; i++) {}",
+                "isCorrect": true
+            }
+        ]
     }
 ]
