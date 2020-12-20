@@ -13,7 +13,7 @@ fetch('./the-quiz.json')
 
 let score = 0;
 let questionCount = 0;
-let timeRemaining = 60;
+let timeRemaining = 100;
 const abtns = document.getElementsByClassName('abtn')
 let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
