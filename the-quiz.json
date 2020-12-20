@@ -103,5 +103,26 @@
                 "isCorrect": true
             }
         ]
+    },
+    {
+        "question": "The setInterval() fuction takes two arguments:",
+        "answers": [
+            {
+                "a": "a function that sets the number of milliseconds",
+                "isCorrect": false
+            },
+            {
+                "a": "the time in milliseconds and then a function",
+                "isCorrect": false
+            },
+            {
+                "a": "a function and then an amount of time in seconds",
+                "isCorrect": false
+            },
+            {
+                "a": "a function and then an amount of time in milliseconds",
+                "isCorrect": true
+            }
+        ]
     }
 ]
