@@ -124,5 +124,26 @@
                 "isCorrect": true
             }
         ]
+    },
+    {
+        "question": "var example = ['example1', 'example2'] --- var example is a(n):",
+        "answers": [
+            {
+                "a": "string",
+                "isCorrect": false
+            },
+            {
+                "a": "object",
+                "isCorrect": false
+            },
+            {
+                "a": "boolean",
+                "isCorrect": false
+            },
+            {
+                "a": "array",
+                "isCorrect": true
+            }
+        ]
     }
 ]
