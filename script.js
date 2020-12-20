@@ -6,6 +6,7 @@ fetch('./the-quiz.json')
     })
     .then(questions => {
         theQuiz = questions;
+        console.log('huh')
     })
     .catch(err => {
         console.log(err)
@@ -109,7 +110,6 @@ function overTime() {
 function quizOver() {
     score = timeRemaining;
     timeRemaining = -11;
-    console.log(timeRemaining);
     boxtop.innerHTML = "Congratulations! You've completed the quiz!"
     for (i = 0; i < abtns.length; i++) {
         abtns[i].style.display = 'none';
