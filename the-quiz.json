@@ -145,5 +145,68 @@
                 "isCorrect": true
             }
         ]
+    },
+    {
+        "question": "var example = { 'first': 'learn javascript', 'second': 'get money' --- example is a(n):",
+        "answers": [
+            {
+                "a": "list",
+                "isCorrect": false
+            },
+            {
+                "a": "function",
+                "isCorrect": false
+            },
+            {
+                "a": "array",
+                "isCorrect": false
+            },
+            {
+                "a": "object",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "a boolean value can only be",
+        "answers": [
+            {
+                "a": "right or wrong",
+                "isCorrect": false
+            },
+            {
+                "a": "true or double true",
+                "isCorrect": false
+            },
+            {
+                "a": "used by ghosts",
+                "isCorrect": false
+            },
+            {
+                "a": "true or false",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "the correct way to access the first item in an array is",
+        "answers": [
+            {
+                "a": "array.first()",
+                "isCorrect": false
+            },
+            {
+                "a": "array.0",
+                "isCorrect": false
+            },
+            {
+                "a": "array[1]",
+                "isCorrect": false
+            },
+            {
+                "a": "array[0]",
+                "isCorrect": true
+            }
+        ]
     }
 ]
