@@ -15,7 +15,7 @@ let score = 0;
 let questionCount = 0;
 let timeRemaining = 60;
 const abtns = document.getElementsByClassName('abtn')
-var highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 startButton.addEventListener("click", startGame);
 resetButton.addEventListener("click", reset)
