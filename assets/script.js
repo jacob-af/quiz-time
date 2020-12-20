@@ -1,6 +1,6 @@
 let theQuiz = [];
 
-fetch('./the-quiz.json')
+fetch('./assets/the-quiz.json')
     .then(response => {
         return response.json()
     })
