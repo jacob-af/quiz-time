@@ -22,10 +22,9 @@ header {
     font-size: 24px;
 }
 
-.btn, 
-footer {
+.btn {
     font-size: 16px;
-    background-color:  #ff9912;
+    background-color: #ff9912;
     color: #191970;
 }
 
@@ -35,9 +34,7 @@ li {
     margin: 0 auto;
 }
 
-.abtn, 
-#resetButton,
-#initialsForm {
+.abtn, #resetButton, #initialsForm {
     display: none;
 }
 
@@ -45,4 +42,18 @@ li {
     min-height: 60px;
     min-width: 80px;
     margin: 5px auto;
+}
+
+footer {
+    display: inline-block;
+    background-color: #ff9912;
+    color: #191970;
+}
+
+.fa {
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: #191970;
 }
