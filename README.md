@@ -4,7 +4,7 @@
 
 This is a short quiz of questions related to using javascript in web development.  The quiz is timed and will save times with initials locally with a JSON object.
 
-site is deployed at: [quiz-time](https://jfeitler00.github.io/quiz-time/)
+site is deployed at: [quiz-time](http://www.jacobaf.com/quiz-time/)
 
 ## Features
 
@@ -49,8 +49,8 @@ site is deployed at: [quiz-time](https://jfeitler00.github.io/quiz-time/)
 
 ## Credits
 
-A thank you forever for reference material at [MDN](https://developer.mozilla.org/en-US/), [w3 Schools](http://w3schools.com), and [Stack Overflow](https://stackoverflow.com/). The method for adding highscores was learned from [this video](https://youtu.be/DFhmNLKwwGw) and the idea to store the quiz in a JSON file was inspired by [this video](https://youtu.be/jK5zzSA2JHI) - both videos coming from a tutorial by [James Quick](https://www.jamesqquick.com/).  All other components of this quiz were developed independently.
+A thank you forever for reference material at [MDN](https://developer.mozilla.org/en-US/), [w3 Schools](http://w3schools.com), and [Stack Overflow](https://stackoverflow.com/). The method for adding highscores was learned from [this video](https://youtu.be/DFhmNLKwwGw) and the idea to store the quiz in a JSON file was inspired by [this video](https://youtu.be/jK5zzSA2JHI) - both videos coming from a tutorial by [James Quick](https://www.jamesqquick.com/).  All other components of this web application were developed independently.
 
 ## License
 
-This website is licensed under the MIT license copyright 2020
+This website is licensed under the MIT license, copyright 2020
