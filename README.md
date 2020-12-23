@@ -16,6 +16,13 @@ site is deployed at: [quiz-time](http://www.jacobaf.com/quiz-time/)
 * When all question are answered or the timer reaches 0, the appropriate game ending occurs: highscore, no highscore, or failure.
 * The top 5 scores are displayable, and user will be prompted to add their initials if they finish the quiz fast enough.
 
+## Potential Improvements
+
+* more questions
+* selection between different question sets
+* special formatting for code snippets
+* server side storage for highscores
+
 ## Contents
 
 * index.html
