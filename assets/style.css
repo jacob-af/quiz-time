@@ -25,7 +25,18 @@ header {
     font-size: 24px;
 }
 
+.code-snip {
+    display: inline-block;
+    font-size: 20px;
+    color: #191970;
+    background-color: #ff9912;
+    border-radius: 2px;
+    padding: 0 5px;
+}
 
+.post-code {
+    display: block;
+}
 
 /* styling of highscores */
 

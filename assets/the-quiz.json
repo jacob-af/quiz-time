@@ -126,7 +126,7 @@
         ]
     },
     {
-        "question": "var example = ['example1', 'example2'] --- var example is a(n):",
+        "question": "<div class = 'code-snip'>var example = ['example1', 'example2']</div><div class='post-code'>example is a(n):</div>",
         "answers": [
             {
                 "a": "string",
@@ -147,7 +147,7 @@
         ]
     },
     {
-        "question": "var example = { 'first': 'learn javascript', 'second': 'get money' } --- example is a(n):",
+        "question": "<div class = 'code-snip'>var example = { 'first': 'learn javascript', 'second': 'get money' } </div><div class='post-code'>example is a(n):</div>",
         "answers": [
             {
                 "a": "list",

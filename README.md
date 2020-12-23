@@ -20,7 +20,7 @@ site is deployed at: [quiz-time](http://www.jacobaf.com/quiz-time/)
 
 * more questions
 * selection between different question sets
-* special formatting for code snippets
+* ~~special formatting for code snippets~~
 * server side storage for highscores
 
 ## Contents
