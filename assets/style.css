@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
+    font-family: 'Roboto';
     text-align: center;
     background-color: #191970;
 }
@@ -18,15 +21,13 @@ header {
 }
 
 #questionText {
-    text-align: Sleft;
+    text-align: left;
     font-size: 24px;
 }
 
-.btn {
-    font-size: 16px;
-    background-color: #ff9912;
-    color: #191970;
-}
+
+
+/* styling of highscores */
 
 li {
     text-align: center;
@@ -34,15 +35,29 @@ li {
     margin: 0 auto;
 }
 
+/* general button styling */
+
+.btn {
+    font-size: 16px;
+    background-color: #ff9912;
+    color: #191970;
+}
+
+/* hides un-needed buttons at start screen */
+
 .abtn, #resetButton, #initialsForm {
     display: none;
 }
+
+/* answer button styling */
 
 .abtn button {
     min-height: 60px;
     min-width: 80px;
     margin: 5px auto;
 }
+
+/* footer and social media button styling */
 
 footer {
     display: inline-block;

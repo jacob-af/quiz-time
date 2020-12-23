@@ -14,15 +14,20 @@
 <body>
 
     <header>
-
+        <!-- space for quiz timer display -->
         <h2 id='timer'>---</h2>
     </header>
     <div class='container'>
+
+        <!-- displays welcome, question number, and then game over as appropriate -->
         <div class='row'>
             <div class='col'>
                 <h1 id='boxtop' class="text-center">Welcome to the Quiz</h1>
             </div>
         </div>
+
+        <!-- used to display quiz rules, question text, game over message, and highscores -->
+        
         <div class='row'>
             <div class='col'>
                 <p id="questionText">
@@ -31,6 +36,8 @@
                 </p>
             </div>
         </div>
+
+        <!-- here we have all the buttons needed for the game, although we only display those needed at any given time-->
 
         <div class='row'>
             <div class='col' id="startButtonDiv">
@@ -42,6 +49,9 @@
             <div class='col' id="resetButton">
                 <button class="btn">Go Back</button>
             </div>
+
+            <!-- the abtn class, or answer buttons, will have their text changed to questions answers as loaded -->
+
             <div class='col-6 col-md-3 abtn'>
                 <button class="btn" id="a1">1</button>
             </div>
@@ -56,6 +66,9 @@
             <div class='col-6 col-md-3 abtn'>
                 <button class="btn" id="a4">4</button>
             </div>
+
+            <!-- form for entering initials for highscore -->
+
             <div class='col' id="initialsForm">
                 <div class="form-group">
                     <label for="initials">Initials</label>
@@ -66,6 +79,8 @@
         </div>
 
     </div>
+
+    <!-- social media links in the footer -->
 
     <footer class="text-center align-baseline fixed-bottom p-2 border-top">
         <a href="https://www.facebook.com/Inflammable" target="_blank" class="fa fa-facebook"></a>

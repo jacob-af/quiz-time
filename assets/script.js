@@ -1,5 +1,7 @@
 let theQuiz = [];
 
+// Load quiz from JSON file
+
 fetch('./assets/the-quiz.json')
     .then(response => {
         return response.json()
@@ -12,11 +14,15 @@ fetch('./assets/the-quiz.json')
         console.log(err)
     })
 
+// Declare global variables, load highscores
+
 let score = 0;
 let questionCount = 0;
 let timeRemaining = 100;
 const abtns = document.getElementsByClassName('abtn')
 let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+// adding event listeners to each button
 
 startButton.addEventListener("click", startGame);
 resetButton.addEventListener("click", reset)
@@ -35,17 +41,21 @@ a4.addEventListener("click", function (event) {
     checkAnswer(event)
 })
 
+// startGame calls two function to begin the game when the start button is clicked
+
 function startGame() {
     startTime();
     startQuiz();
 }
+
+// startTime will begin the timer, and stop if it reaches 0 or below, with separate conditions for game ending.
 
 function startTime() {
     var timerInterval = setInterval(function () {
         timer.textContent = timeRemaining + " seconds remaining.";
         timeRemaining--;
 
-        if (timeRemaining <= 0 && timeRemaining > -11) {
+        if (timeRemaining <= 0 && timeRemaining > -10) {
             clearInterval(timerInterval);
             timer.textContent = '---'
             overTime();
@@ -57,6 +67,8 @@ function startTime() {
     }, 1000);
 }
 
+// hides uneccesary buttons, brings answer buttons up, calls first question
+
 function startQuiz() {
     startButtonDiv.style.display = "none";
     showScoresDiv.style.display = 'none';
@@ -65,6 +77,9 @@ function startQuiz() {
     }
     nextQuestion()
 }
+
+// this function displays the question and answers, the questions are chose at random and removed from the list
+// of questions as they are answered.  answers are displayed in a random order as well
 
 function nextQuestion() {
     if (theQuiz.length > 0) {
@@ -89,6 +104,8 @@ function nextQuestion() {
     }
 }
 
+// checks answer, if correct, next question else adjust timer if incorrect and disable ubtton
+
 function checkAnswer(event) {
     if (event.target.value === 'true') {
         nextQuestion();
@@ -98,6 +115,8 @@ function checkAnswer(event) {
     }
 }
 
+// if time runs out the user is notified, the quiz ended, and they are offered to try again.
+
 function overTime() {
     boxtop.innerHTML = "You ran out of time!";
     questionText.innerHTML = `Failure! there were ${theQuiz.length + 1} questions unanswered!`
@@ -106,6 +125,8 @@ function overTime() {
     }
     resetButton.style.display = "inline";
 }
+
+// if they complete all questions, they will only get to add a highscore if their score was high enough.
 
 function quizOver() {
     score = timeRemaining;
@@ -125,7 +146,7 @@ function quizOver() {
     }
 }
 
-
+// validates highscore entry, adds to list, sorts and then adjust size of list
 
 function addHighScore(event) {
     event.preventDefault();
@@ -141,6 +162,8 @@ function addHighScore(event) {
     }
 }
 
+// displays highscores
+
 function showHighScores() {
     showScoresDiv.style.display = 'none';
     startButtonDiv.style.display = 'none';
@@ -154,6 +177,8 @@ function showHighScores() {
     questionText.appendChild(hslist)
     resetButton.style.display = 'inline';
 }
+
+// rather than resetting all variables the page is reloaded, effectively resetting the quiz.
 
 function reset() {
     location.reload()
