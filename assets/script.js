@@ -85,20 +85,20 @@ function nextQuestion() {
     if (theQuiz.length > 0) {
         questionCount++
         boxtop.innerHTML = `Question ${questionCount}`
-        // let currentQuestion = Math.floor(Math.random() * theQuiz.length)
-        // questionText.innerHTML = theQuiz[currentQuestion].question
-        // for (let i = 0; i < 4; i++) {
-        //     document.getElementById(`a${i + 1}`).disabled = false;
-        //     currentAnswer = Math.floor(Math.random() * theQuiz[currentQuestion].answers.length)
-        //     document.getElementById(`a${i + 1}`).innerHTML = theQuiz[currentQuestion].answers[currentAnswer].a;
-        //     if (theQuiz[currentQuestion].answers[currentAnswer].isCorrect) {
-        //         document.getElementById(`a${i + 1}`).value = true
-        //     } else {
-        //         document.getElementById(`a${i + 1}`).value = false
-        //     }
-        //     theQuiz[currentQuestion].answers.splice(currentAnswer, 1)
-        // }
-        // theQuiz.splice(currentQuestion, 1)
+        let currentQuestion = Math.floor(Math.random() * theQuiz.length)
+        questionText.innerHTML = theQuiz[currentQuestion].question
+        for (let i = 0; i < 4; i++) {
+            document.getElementById(`a${i + 1}`).disabled = false;
+            currentAnswer = Math.floor(Math.random() * theQuiz[currentQuestion].answers.length)
+            document.getElementById(`a${i + 1}`).innerHTML = theQuiz[currentQuestion].answers[currentAnswer].a;
+            if (theQuiz[currentQuestion].answers[currentAnswer].isCorrect) {
+                document.getElementById(`a${i + 1}`).value = true
+            } else {
+                document.getElementById(`a${i + 1}`).value = false
+            }
+            theQuiz[currentQuestion].answers.splice(currentAnswer, 1)
+        }
+        theQuiz.splice(currentQuestion, 1)
     } else {
         quizOver();
     }
